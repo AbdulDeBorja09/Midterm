@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>De Borja</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+      .application {
+        margin: auto;
+        background-color: rgb(219, 219, 219);
+        padding: 25px;
+        width: 500px;
+      }
+      .button {
+        padding-top: 20px;
+      }
+      .begin {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 0.5px solid black;
+      }
+      .container1,
+      .container2,
+      .container3 {
+        padding-top: 20px;
+        font-size: 15px;
+      }
+      .container4 {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: bottom;
+      }
+      table,
+      .input1 {
+        width: 100%;
+      }
+      input,
+      select {
+        border-radius: 3px;
+        border: 0.5px solid black;
+      }
+      .icons {
+        width: 19px;
+        height: 19px;
+      }
+      .save {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 0.5px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="application">
+      <form action="call_disposition.php" method="get">
+        <div class="head">
+          <p id="title">
+            <b style="font-size: large">Date: September 28, 2023</b>
+            <br />Running Handle Time: 1:30pm
+          </p>
+          <label for="title">De Borja, Abdul Aziz A - BSIT221A</label>
+        </div>
+        <div class="button">
+          <button class="begin" href="#">Begin</button>
+        </div>
+        <div class="container1">
+          <table>
+            <tr>
+              <td>
+                <label for="iD" style="padding-right: 10px"
+                  >Interaction ID</label
+                >
+              </td>
+              <td>
+                <input
+                  class="number"
+                  type="number"
+                  id="iD"
+                  min="1"
+                  maxlength="5"
+                  style="width: 98%"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="R1">Reason 1</label>
+              </td>
+              <td>
+                <select class="input1" id="R1">
+                  <option selected></option>
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                  <option value="c">c</option>
+                  <option value="d">d</option>
+                  <option value="e">e</option>
+                  <option value="f">f</option>
+                  <option value="g">g</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="R2">Reason 2</label>
+              </td>
+              <td>
+                <select class="input1" id="R2">
+                  <option selected></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="container2">
+          <input id="issue" type="checkbox" />
+          <label for="issue">Issue resolved?</label>
+          <br />
+          <input id="repeat" type="checkbox" />
+          <label for="repeat" style="padding-right: 19px"
+            >Is this a repeat call?
+          </label>
+          <select
+            class="repeat_call"
+            aria-placeholder=""
+            id="R2"
+            style="width: 60%"
+          >
+            <option selected disabled>--Select Repeat Call Reason--</option>
+            <option value="aa">aa</option>
+            <option value="bb">bb</option>
+            <option value="cc">cc</option>
+            <option value="dd">dd</option>
+            <option value="ee">ee</option>
+          </select>
+          <br />
+          <br />
+          <label for="credit">How much credit/adjustment did we apply?</label>
+          <input type="text" id="credit" style="width: 156px" />
+          <label for="repeat" style="padding-right: 19px"
+            >Credit / adjustment reason</label
+          >
+          <select
+            class="repeat_call"
+            aria-placeholder=""
+            id="R2"
+            style="width: 53.5%; margin-top: 5px"
+          >
+            <option selected disabled>--Select Adjustment Reason--</option>
+            <option value="11">11</option>
+            <option value="22">22</option>
+            <option value="33">33</option>
+            <option value="44">44</option>
+            <option value="55">55</option>
+          </select>
+        </div>
+        <div class="container3">
+          <table>
+            <tr>
+              <td>
+                <input id="lbl" type="checkbox" />
+                <label for="lbl">l2C documented?</label>
+              </td>
+              <td>
+                <input id="lbl" type="checkbox" />
+                <label for="lbl">Need a call back?</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input id="lbl" type="checkbox" />
+                <label for="lbl">Test resoulution completed?</label>
+              </td>
+              <td>
+                <input id="lbl" type="checkbox" />
+                <label for="lbl">SAA is followed?</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input id="lbl" type="checkbox" />
+                <label for="lbl">Did you utilize home spiel?</label>
+              </td>
+              <td>
+                <input id="lbl" type="checkbox" />
+                <label for="lbl">3-2-1 Go Action is followed?</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input id="lbl" type="checkbox" />
+                <label for="lbl">Promoted self service options?</label>
+              </td>
+              <td>
+                <input id="lbl" type="checkbox" />
+                <label for="lbl">Voyage issue encountered</label>
+              </td>
+            </tr>
+          </table>
+          <div class="container4">
+            <label for="rate" style="padding-right: 50px">
+              Please rate this Call</label
+            >
+            <input type="radio" name="rate" />
+            <img
+              src="https://cdn.pixabay.com/photo/2020/12/27/20/24/smile-5865208_1280.png"
+              class="icons"
+            />
+            <input type="radio" name="rate" />
+            <img
+              src="https://cdn.pixabay.com/photo/2020/12/19/03/01/emoji-5843458_640.png"
+              class="icons"
+            />
+            <input type="radio" name="rate" />
+            <img
+              src="https://cdn.pixabay.com/photo/2020/12/19/02/50/emoji-5843434_1280.png"
+              class="icons"
+            />
+          </div>
+          <div class="button_save" style="padding-top: 20px">
+            <button type="submit" class="save">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
